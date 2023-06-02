@@ -1,7 +1,8 @@
 import './App.css'
 import { useState } from 'react'
 import Header from './components/Header'
-import Cards from './components/Cards'
+import Card from './components/Cards'
+
 
 const cardList = [
   {
@@ -39,21 +40,22 @@ const cardList = [
 ];
 
 function App() {
-  const cardElements = cardList.map((card, index) => (
-    <Cards key={index} cardList={card} />
-  ));
 
   return (
     <>
-      <Header />
+      <Header/>
       <div className='appGlobalCard'>
-        {cardElements}
+        <Card list={cardList} />
       </div>
+     
     </>
   )
 }
 
 export default App
+
+
+
 
 
 

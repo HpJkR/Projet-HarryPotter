@@ -1,15 +1,19 @@
-import './Cards.css'
+import "./Cards.css"
 
-const Cards = ({ cardList }) => {
+const Card = (props) => {
+  const {list} = props;
+
   return (
-    <div className='cardGlobal'>
-      <img 
-        src={cardList.imgSrc}
-        alt="Image de Harry Potter"
-      />
-      <p>{cardList.name}</p>
-    </div>
-  )
+      <>
+      {list.map((item, index) => (
+          <div className="cardGlobal" key={index}>
+          <h3>{item.name}</h3>
+          <img src={item.imgSrc} alt={item.name} />
+          <p>{item.description}</p>
+          </div>
+      ))}
+  </>
+  );
 }
 
-export default Cards
+export default Card;

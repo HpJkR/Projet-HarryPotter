@@ -1,7 +1,7 @@
 .cardGlobal {
   display: flex;
   flex-direction: column;
-  width: 140px;
+  width: 200px;
   justify-content: center;
   align-items: center;
   padding: 10px 10px 20px 10px;
