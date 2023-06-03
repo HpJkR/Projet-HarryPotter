@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Form.css";
 
 const Forms = () => {
-    const [firstname, setFirstname] = useState(""); // Variable d'état
+    const [firstname, setFirstname] = useState(""); 
 
     // Fonction pour mettre à jour la valeur de firstname
     const handleInputChange = (event) => {
