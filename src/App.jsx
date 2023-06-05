@@ -92,16 +92,11 @@ function App() {
 
   return (
     <>
-    <div className='topPage'>
-    <Header/>
-    <Forms/>
-      
-
-    </div>
-    
-      
-      <FilterArray  handleFilter={handleFilter} handleFilterType={handleFilterType} handleReset={handleReset}/>
-
+      <div className='topPage'>
+      <Header/>
+      <Forms/>
+      </div>
+        <FilterArray  handleFilter={handleFilter} handleFilterType={handleFilterType} handleReset={handleReset}/>
         <div className='appGlobalCard'>
           <Card list={filteredList} />
         </div>
