@@ -1,14 +1,17 @@
 import "./Filter.css"
 
-const FilterArray = () => {
+const FilterArray = ({handleFilter, handleFilterType, handleReset}) => {
    
     return (
         <>
         <div className="buttonGlobal">
-        <button type="button">Age</button>
-        <button type="button">Sexe</button>
-        <button type="button">Taille</button>
-        <button type="button">Poids</button>
+        <button onClick={() => handleFilter("homme")}>Homme</button>
+        <button onClick={() => handleFilter("femme")}>Femme</button>
+        <button onClick={() => handleFilterType("méchant")}>Méchant</button>
+        <button onClick={() => handleFilterType("gentil")}>Gentil</button>
+        </div>
+        <div className="reset">
+<button onClick={handleReset}>Reset</button>
         </div>
         
 
