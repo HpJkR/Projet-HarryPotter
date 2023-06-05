@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Card from './components/Cards'
 import Forms from "./components/Form"
+import FilterArray from "./components/Filter"
 
 
 const cardList = [
@@ -10,6 +11,7 @@ const cardList = [
     name: "Harry Potter",
     imgSrc: "https://images.rtl.fr/~c/770v513/rtl/www/1582375-le-jeune-daniel-radcliffe-dans-harry-potter-a-l-ecole-des-sorciers.jpg", 
     description: "Harry Potter est un jeune sorcier orphelin célèbre pour avoir survécu à l'attaque de Lord Voldemort. Avec ses amis Ron et Hermione, il affronte les forces du mal et découvre la vérité sur son passé. Courageux et déterminé, Harry incarne l'espoir et l'amitié dans sa quête pour un monde meilleur. Sa saga a captivé des millions de lecteurs, inspirant la résilience et la croyance en un avenir lumineux. Harry Potter est un personnage aimé pour sa loyauté envers ses amis, sa capacité à faire preuve d'empathie et sa volonté inébranlable de protéger ceux qu'il aime. Sa saga captivante a inspiré des millions de lecteurs à croire en eux-mêmes et à lutter pour la justice et la paix."
+    
   },
   {
     name: "Hermione Granger",
@@ -58,7 +60,7 @@ function App() {
       <div className='appGlobalCard'>
         <Card list={cardList} />
       </div>
-     
+     <FilterArray list={cardList}/>
     </>
   )
 }
