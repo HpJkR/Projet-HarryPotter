@@ -1,13 +1,14 @@
 .buttonGlobal {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  margin-top: 10px;
   gap: 17px;
 }
 
 .buttonGlobal button {
   padding: 0.6em 1em;
   border: 4px solid #f4a631;
+  border-radius: 22px;
   transition: ease-in-out 0.3s;
   background-color: transparent;
   color: #f4a631;
@@ -22,15 +23,27 @@
 }
 
 .titleFilter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
   text-align: center;
-  color: #fff;
+}
+#character {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #f4a631;
+}
+#RectangleOrange {
+  width: 30%;
+  height: 2px;
+  background-color: #f4a631;
 }
 
 .reset {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .reset button {

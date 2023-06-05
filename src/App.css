@@ -1,10 +1,35 @@
 body {
-  background-color: rgb(165, 16, 16);
+  background-color: #141212;
   cursor: url("assets/plane.png"), auto;
+}
+
+.topPage {
+  background-image: url("assets/poudlard.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  object-fit: contain;
+  height: 110vh;
+  width: 100vw;
+  aspect-ratio: 4/3;
+  -webkit-mask-image: linear-gradient(
+    rgb(0 0 0 /1),
+    rgb(0 0 0 /1) 70%,
+    rgb(0 0 0 /0)
+  );
+  mask-image: linear-gradient(rgb(0 0 0 /1), rgb(0 0 0 /1) 70%, rgb(0 0 0 /0));
 }
 
 .appGlobalCard {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+@media screen and (max-width: 700px) {
+  .topPage {
+    height: 75vh;
+    width: 100vw;
+  }
 }

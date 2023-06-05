@@ -7,10 +7,12 @@ const Card = (props) => {
       <>
       {list.map((item, index) => (
           <div className="cardGlobal" key={index}>
-          <h3 className={`cardTitle-${index}`}>{item.name}</h3>
-          <img src={item.imgSrc} alt={item.name} />
-          <p>{item.age}</p>
-          <p>{item.description}</p>
+            <img src={item.imgSrc} alt={item.name} />
+            <div className="cardText">
+            <h3 className={`cardTitle-${index}`}>{item.name}</h3>
+            <p>{item.description}</p>
+            </div>
+           
           </div>
       ))}
   </>

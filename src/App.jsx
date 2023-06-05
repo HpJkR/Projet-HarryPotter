@@ -1,16 +1,18 @@
-import './App.css'
 import { useState } from 'react'
-import Header from './components/Header'
+
 import Card from './components/Cards'
 import Forms from "./components/Form"
 import FilterArray from "./components/Filter"
+import Header from './components/Header'
+
+import './App.css'
 
 
 const cardList = [
   {
     name: "Harry Potter",
     imgSrc: "https://images.rtl.fr/~c/770v513/rtl/www/1582375-le-jeune-daniel-radcliffe-dans-harry-potter-a-l-ecole-des-sorciers.jpg", 
-    description: "Harry Potter est un jeune sorcier orphelin célèbre pour avoir survécu à l'attaque de Lord Voldemort. Avec ses amis Ron et Hermione, il affronte les forces du mal et découvre la vérité sur son passé. Courageux et déterminé, Harry incarne l'espoir et l'amitié dans sa quête pour un monde meilleur. Sa saga a captivé des millions de lecteurs, inspirant la résilience et la croyance en un avenir lumineux. Harry Potter est un personnage aimé pour sa loyauté envers ses amis, sa capacité à faire preuve d'empathie et sa volonté inébranlable de protéger ceux qu'il aime.",
+    description: "Harry Potter, jeune sorcier orphelin célèbre pour avoir survécu à l'attaque de Lord Voldemort. Courageux et déterminé, il incarne l'espoir et l'amitié dans sa quête pour un monde meilleur. Sa saga captivante a inspiré des millions de lecteurs, les incitant à croire en eux-mêmes et à lutter pour la justice et la paix. Harry est aimé pour sa loyauté envers ses amis, son empathie et sa volonté inébranlable de protéger ceux qu'il aime. Son parcours épique révèle un héros aux multiples facettes, prêt à affronter tous les défis pour vaincre les forces du mal.",
     type : "gentil",
     genre : "homme",
     
@@ -19,7 +21,7 @@ const cardList = [
   {
     name: "Hermione Granger",
     imgSrc: "https://www.melty.fr/wp-content/uploads/meltyfr/2022/01/media-35272.jpg",
-    description: "Hermione Granger est une brillante sorcière et l'une des meilleures amies de Harry Potter. Connue pour son intelligence et sa soif de connaissances, elle se démarque par son engagement sans faille envers la justice. Elle joue un rôle clé dans la lutte contre les forces du mal, utilisant sa magie et son esprit vif pour résoudre des énigmes et trouver des solutions. Elle incarne la persévérance, l'intégrité et l'importance de l'amitié. Hermione est devenue un modèle pour de nombreux fans, montrant que les femmes peuvent être puissantes et intelligentes.",
+    description: "Hermione Granger, sorcière brillante et déterminée, incarne l'intelligence et la force de caractère. Son esprit vif et sa soif de connaissances la propulsent dans des aventures audacieuses. Modèle d'émancipation et d'égalité, elle défie les normes établies avec courage et ténacité. Hermione est une amie loyale, prête à se battre pour la justice et à protéger ceux qui lui sont chers. Sa présence lumineuse et sa détermination inébranlable font d'elle un pilier essentiel dans la lutte contre les forces du mal.",
     type : "gentil",
     genre : "femme"
     
@@ -34,7 +36,7 @@ const cardList = [
   {
     name: "Albus Dumbledore",
     imgSrc: "https://fr.web.img6.acsta.net/newsv7/21/07/13/12/56/4409545.jpg",
-    description: "Albus Dumbledore est un puissant sorcier et le directeur emblématique de l'école de sorcellerie Poudlard. Avec sa longue barbe blanche et ses yeux pétillants, Dumbledore est connu pour sa sagesse et son intelligence exceptionnelle. Il est un mentor pour Harry Potter, le guidant dans sa lutte contre Voldemort. Dumbledore incarne la bienveillance, la tolérance et la capacité à voir la beauté même dans les moments les plus sombres. Il est respecté et admiré par la communauté magique pour sa défense des valeurs de justice et de liberté.Son héritage perdure en tant que figure emblématique de l'univers de Harry Potter, symbole de sagesse et de bonté.",
+    description: "Albus Dumbledore est un puissant sorcier et le directeur emblématique de l'école de sorcellerie Poudlard. Avec sa longue barbe blanche et ses yeux pétillants, Dumbledore est connu pour sa sagesse et son intelligence exceptionnelle. Il est un mentor pour Harry Potter, le guidant dans sa lutte contre Voldemort. Dumbledore incarne la bienveillance, la tolérance et la capacité à voir la beauté même dans les moments les plus sombres. Il est respecté et admiré par la communauté magique pour sa défense des valeurs de justice et de liberté.",
     type : "gentil",
     genre : "homme"
   },
@@ -62,13 +64,14 @@ const cardList = [
   {
     name: "Bellatrix Lestrange",
     imgSrc: "https://www.serieously.com/app/uploads/2022/05/bellatrix-lestrange10.jpg",
-    description: "Bellatrix Lestrange est une sorcière cruelle et fanatique, fidèle servante de Lord Voldemort dans la série Harry Potter. Avec ses cheveux noirs ébouriffés et son regard intense, Bellatrix incarne la folie et la dévotion aveugle envers le Seigneur des Ténèbres. Elle est connue pour sa cruauté sadique et son plaisir à infliger la douleur. Bellatrix est une combattante redoutable, maîtrisant les arts de la magie noire. Sa loyauté fanatique envers Voldemort et sa participation active à ses plans font d'elle une menace redoutée. Bellatrix Lestrange est un personnage sombre et mémorable, ajoutant une touche de danger et de fanatisme à l'univers de Harry Potter.",
+    description: "Bellatrix Lestrange est une sorcière cruelle et fanatique, fidèle servante de Lord Voldemort dans la série Harry Potter. Avec ses cheveux noirs ébouriffés et son regard intense, Bellatrix incarne la folie et la dévotion aveugle envers le Seigneur des Ténèbres. Elle est connue pour sa cruauté sadique et son plaisir à infliger la douleur. Bellatrix est une combattante redoutable, maîtrisant les arts de la magie noire. Sa participation active à ses plans font d'elle une menace redoutée. Bellatrix Lestrange est un personnage sombre et mémorable, ajoutant une touche de danger et de fanatisme à l'univers de Harry Potter.",
     type : "méchant",
     genre : "femme"
   },
 ];
 
 function App() {
+  
   const [filteredList, setFilteredList] = useState(cardList);
 
   const handleFilter = (genre) => {
@@ -89,12 +92,19 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Forms/>
-      <div className='appGlobalCard'>
-        <Card list={filteredList} />
-      </div>
-     <FilterArray  handleFilter={handleFilter} handleFilterType={handleFilterType} handleReset={handleReset}/>
+    <div className='topPage'>
+    <Header/>
+    <Forms/>
+      
+
+    </div>
+    
+      
+      <FilterArray  handleFilter={handleFilter} handleFilterType={handleFilterType} handleReset={handleReset}/>
+
+        <div className='appGlobalCard'>
+          <Card list={filteredList} />
+        </div>
     </>
   )
 }
