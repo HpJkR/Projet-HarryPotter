@@ -4,7 +4,7 @@ import "./Form.css";
 const Forms = () => {
     const [firstname, setFirstname] = useState("jeune sorcier"); 
 
-    // Fonction pour mettre à jour la valeur de firstname
+    
     const handleInputChange = (event) => {
         setFirstname(event.target.value);
     };
